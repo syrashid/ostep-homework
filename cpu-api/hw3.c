@@ -26,3 +26,7 @@ int main(int argc, char *argv[])
   }
   return 0;
 }
+
+// In general, there is no guaranteed way to ensure that the child process prints its message before the parent process. The order in which processes run is determined by the operating system's scheduling algorithm, which is often unpredictable and can depend on many factors, such as the current system load, the priority of the processes, and the specific implementation of the operating system.
+
+// Can use tools like sleep or usleep or flushing the output buffers which could help but no guarentees
