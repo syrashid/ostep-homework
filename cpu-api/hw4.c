@@ -17,6 +17,12 @@ int main(int argc, char *argv[])
   {
     // child (new process)
     printf("hello, I am child (pid:%d)\n", (int)getpid());
+    char *args[] = {"ls", NULL};
+    execvp(args[0], args);
+
+    // If execvp fails, the following line will be printed
+    fprintf(stderr, "execvp failed\n");
+    exit(1);
   }
   else
   {
