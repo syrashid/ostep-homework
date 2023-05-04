@@ -1,12 +1,13 @@
-all: hw1 hw2
+CC = gcc
+CFLAGS = -Wall
+
+SRC := $(filter-out hw_template.c, $(wildcard *.c))
+OBJ := $(SRC:.c=.o)
+
+all: $(OBJ)
 
 clean:
-	rm -f hw1 hw2
+	rm -f $(OBJ)
 
-hw1: hw1.c
-	gcc -o hw1 hw1.c -Wall
-
-hw2: hw2.c
-	gcc -o hw2 hw2.c -Wall
-
-
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
