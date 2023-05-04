@@ -5,7 +5,7 @@
 int main(int argc, char *argv[])
 {
 
-  printf("hello world (pid:%d)\n", (int)getpid());
+  printf("gutentag world (pid:%d)\n", (int)getpid());
   int rc = fork();
   if (rc < 0)
   {
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
   else
   {
     // parent goes down this path (original process)
-    printf("hello, I am parent of %d (pid:%d)\n",
+    printf("goodbye, I am parent of %d (pid:%d)\n",
            rc, (int)getpid());
   }
   return 0;
