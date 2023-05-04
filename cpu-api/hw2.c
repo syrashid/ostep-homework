@@ -2,6 +2,7 @@
 #include <stdio.h>  // input and output
 #include <stdlib.h> // memory allocation
 #include <unistd.h> // process management
+#include <string.h> // strlen function
 
 int main(int argc, char *argv[])
 {
@@ -51,3 +52,6 @@ int main(int argc, char *argv[])
   }
   return 0;
 }
+
+// In this case they both can access the file descripter
+// As for which one writes first will be dependent on the scheduler or if you configure the processes to be deterministic
