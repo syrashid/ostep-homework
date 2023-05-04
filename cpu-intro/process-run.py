@@ -198,7 +198,7 @@ class scheduler:
         self.move_to_running(STATE_READY)
 
         # OUTPUT: headers for each column
-        print('%s' % 'Time', end='') 
+        print('%s' % 'Time', end='')
         for pid in range(len(self.proc_info)):
             print('%14s' % ('PID:%2d' % (pid)), end='')
         print('%14s' % 'CPU', end='')
@@ -233,7 +233,7 @@ class scheduler:
                             # this is the only thing to run: so run it
                             self.next_proc(pid)
                     self.check_if_done()
-            
+
             # if current proc is RUNNING and has an instruction, execute it
             instruction_to_execute = ''
             if self.proc_info[self.curr_proc][PROC_STATE] == STATE_RUNNING and \
@@ -252,7 +252,7 @@ class scheduler:
                 else:
                     print('%14s' % (self.proc_info[pid][PROC_STATE]), end='')
 
-            # CPU output here: if no instruction executes, output a space, otherwise a 1 
+            # CPU output here: if no instruction executes, output a space, otherwise a 1
             if instruction_to_execute == '':
                 print('%14s' % ' ', end='')
             else:
@@ -278,7 +278,7 @@ class scheduler:
             # ENDCASE: check if currently running thing is out of instructions
             self.check_if_done()
         return (cpu_busy, io_busy, clock_tick)
-        
+
 #
 # PARSE ARGUMENTS
 #
