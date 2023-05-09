@@ -2,6 +2,8 @@
 
 int main(int argc, char *argv[])
 {
-  // Your code here
+  int size = atoi(argv[1]);
+  int *arr = malloc(size * 1048576);
+
   return 0;
 }
