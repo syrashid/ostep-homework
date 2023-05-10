@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
   int size = atoi(argv[1]);
   int time_in_seconds = atoi(argv[2]);
   int *arr = calloc(size * 1048576, sizeof(int));
-  size_t arr_size = size * 1048576 * sizeof(int);
+  int arr_size = size * 1048576;
 
   clock_t start_time = clock();
 
